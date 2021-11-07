@@ -1,0 +1,23 @@
+1) Identity and Access Management; Global service
+2) Groups only contain users, not other groups.
+3) Some users don't have to belong to a group and user can belong to multiple groups(can overlap).
+4) Users or groups can be assigned JSON documents called policies/permissions.
+5) Least Privilege Principle: don't give more permissions than a user needs.
+6) User inherits policies from the group it belongs to.
+7) Root User || IAM user
+8) Inline Policy --> only attached to a user/ directly to a user.
+9) IAM policies Structure: Version, ID, Statement(Sid,effect,Principal,action,resource,condition)
+10) A user can inherit the inline policy, and the policies from various groups at one time. 
+11) Administrator Access Policy: has all actions and all resources.
+12) Can create our own Policy as well either through the visual editor or write a json file.
+
+1) IAM Password Policy 
+2) Multi Factor Authentication -- Security (EXTRA SECURITY + original password)
+    Even if a password is stolen or hacked, the account is not compromised.
+    MFA Device Options in AWS:
+      1) Virtual MFA Device: Support for multiple tokens(users) on a single device/ phone. 
+      2) Universal Second Factor(U2F) Security Key: Physical device such as Yubikey by Yubico(3rd party). Using a single security key, support for multiple users.
+      3) Hardware Key Fob MFA device(Gemalto 3rd party).
+      4) Hardware Key Fob MFA Device for AWS GovCloud(US).
+      
+      
