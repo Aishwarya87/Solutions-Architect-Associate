@@ -1,0 +1,11 @@
+1) AWS is a cloud provider.
+2) provides with servers and services that can be used on demand and scale easily(amount).
+3) AWS powers some of the biggest websites in the world. --netflix
+4) AWS is global.
+5) Amazon EC2 - IAAS
+6) Elastic BeanStalk- PAAS
+7) Services- IAM, EC2
+8) IAM is a global service and does not require region selection(not a regional service).
+9) Resources are scoped to a region.
+10) Not every service is offered in every region.
+
