@@ -1,0 +1,8 @@
+1) ec2= IAAS = Elastic Compute Cloud
+2) Consists of: Renting VMs, store data on virtual drives(EBS), distribute load across machines(ELB), scale services using an auto-scaling group(ASG)
+3) Bootstrapping: launching commands when a machine starts. script is only run once at the instance first start.
+4) The ec2 user data script runs with the root user(sudo command).
+5) ec2 instance types: t2.micro, t2.xlarge
+
+
+
