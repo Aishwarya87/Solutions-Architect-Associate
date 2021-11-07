@@ -1,0 +1,47 @@
+1) To access AWS, there are three options:
+  AWS management console(protected by password+MFA)
+  AWS CLI(protected by access keys)
+  AWS SDK(protected by access keys)
+2) Access keys are generated through the console.
+3) Users manage their own access keys.
+4) Access keys are secret; just like passwords.
+5) SDKs are embedded within the apllications. These are language specific APIs(set of libraries).
+
+AWS CLI:
+6) AWS command line interface is installed first. To check, run aws --version.
+7) aws configure
+8) To check: aws iam list-users
+    Lists all the users in JSON format(default).
+9) AWS CLI is an alternative to the management console.
+
+AWS CloudShell: terminal for commands
+1) Cloudshell is only available in some regions.
+
+Create a file that contains the word test
+--> echo "test" > demo.txt
+--> cat demo.txt
+test
+Get Path
+--> pwd
+Gives path to download files.
+
+IAM Roles For Services
+ An IAM role is similar to an IAM user, in that it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS.
+ Using aws services through an ec2 instance but only with permissions.
+ EC2 instance roles, lambda function roles, Roles for CloudFormation.
+ In simple words, attaching the permissions to the aws services commonly.
+ 
+IAM Security Tools:(AUDIT)
+  IAM Credentials Report- a csv file(shows accounts, information about accesskeys, passwords, security
+  IAM access advisor- provides service last accessed information for the accounts.
+  
+IAM guidelines and best practices:
+1) assign users to groups and permissions to groups.
+  
+IMP-: IAM Users access AWS services using their own credentials (username &amp; password or Access Keys).
+Policies are JSON documents.
+Don't give more permissions than the user needs. Grant least privilege.
+MFA for root account security.
+IAM User Groups can not be part of other User Groups. IAM User Groups can contain only IAM Users.
+AWS infrastructure is AWS responsibility. 
+
