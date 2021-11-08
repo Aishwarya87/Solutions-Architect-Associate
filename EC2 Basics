@@ -4,5 +4,26 @@
 4) The ec2 user data script runs with the root user(sudo command).
 5) ec2 instance types: t2.micro, t2.xlarge
 
+Deployment
+1) Launch an AMI(amazon machine image). Can also create our own AMI's.
+2) Configure Instance Details: Enter user data: the script launched at the boot of the instance; userdata.sh
+3) The security rule 0.0.0.0/0, ::/0 will allow traffic from everywhere.
+4) Select a key pair: to login into the instance.
+5) Tags give the name to the instance.
+ 
+Cloud allows to be flexible and gets computing power very quickly
+5) copy and paste the public ipv4 ip.
+6) Started a web server on our ec2 instance using the script on the user data.
+7) Used a public ip to access the web server.
+8) Instance termination: deletion.
+9) If you stop and then start the instance again, the public ipv4 changes.
+
+
+Instance Types
+Naming Convention  m5.2xlarge; m= instance class; 5=generation; 2xlarge= size within the instance class== more memory; more CPU; 
+1) General purpose: eg: t2.micro
+2) Compute Optimized: tasks that require high performance processors. eg: C4, C5a, C6g
+3) Memory Optimized: process large data sets; databases, big unstructured data; eg: R6g series where R stands for RAM
+4) Storage Optimized: OLTP systems( online transaction processing). data warehousing applications, distributed systems; eg: I,D,H1
 
 
