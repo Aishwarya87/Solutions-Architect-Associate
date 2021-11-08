@@ -1,0 +1,11 @@
+1) These are the fundamental of network security.
+2) They control how traffic is allowed into or out of the ec2 instance.
+3) These act as a firewall on ec2 instance.
+4) These regulate: access to ports; authorised IP ranges- IPv4, IPv6; conrol of inbound network; control of outbound network. 
+5) Security groups can be attached to multiple instances; are locked down to a region/VPC combination.
+6) If the application is not accessible(time out), then it's a security group issue.
+7) Connection refused error-> an application error.
+8) By default,   
+
+
+
