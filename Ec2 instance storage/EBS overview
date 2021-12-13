@@ -1,0 +1,10 @@
+Elastic block storage volume is a network drive attached to instances while they run.
+allows instances to persist data even after termination.
+CAN ONLY BE MOUNTED TO ONE INSTANCE AT A TIME.
+SPECIFIC AZ.
+
+1) not a physical drive. can be detached from an ec2 instance and attached to another one quickly.
+2) two EBS Volumes attached to one instance.
+USE CASE: preserve root volume when instance is terminated.
+
+
