@@ -1,0 +1,31 @@
+Networking has two ips:
+ipv4 and ipv6(3ffe)
+
+ipv6 is newer and is used in IoT.
+ipv4 from 0-255.
+
+Public versus private IP:
+Public IP means the machine can be identified on the internet(www)
+must be unique across the whole web( no two machines can have the same public IP).
+can be geo-located easily.
+
+Private IP:
+the machine can only be identified on a private network.
+the ip must be unique across the private network.
+two diff private networks(two companies) can have the same ips.
+machines connect to www using an internet gateway(a proxy).
+only some ips can be used as a private ip.
+
+
+When you stop and start an ec2 instance, it can change its public ip.
+if you need to have a fixed public ip for your instance, you need an elastic ip.
+you can attach it to one instance at a time.
+can only have 5 elastic ip in your account.
+
+Instead, we can use a random public IP and register a DNS name to it.
+or can use a load balancer and not use a public IP.
+
+By default, ec2 instance comes with : private IP for the internal AWS network, a public ip for www.
+when we are doing ssh, cant have a private ip because we are not in the same network.
+
+
