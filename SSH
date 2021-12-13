@@ -1,0 +1,17 @@
+ssh: command line interface utility for mac or linux + windows>=10
+for windows<10 + >=10, use putty
+for everything, ec2 instance connect.
+
+i for identity file with extension pem
+protect the pem file for future errors: for windows, change the users.
+commands to connect to an ec2 instance using ssh:
+
+ssh
+ssh -i path ec2-user@ipv4publicip
+
+
+connect to an ec2 instance using ec2 instance connect
+
+provide aws credentials to our ec2 instance; through iam roles and not aws configure.
+
+
