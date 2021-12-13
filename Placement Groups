@@ -1,0 +1,22 @@
+Cluster: clusters instances into a low latency group, 10 Gbps network(bandwidth bw instances) in a single availability zone. same rack, same AZ
+if the rack fails, all instances fail at the same time.
+use case: big data job to complete fast
+extremely low latency and high network throughput.
+high performance application
+
+
+Spread: minimize th failure risk.
+all instances in different hardware.
+span across AZ
+limited to 7 instances per AZ per placement group.
+use case:application that need to maximize high availability.
+critical application.
+
+
+Partition: hadoop, cassandra, kafka
+upto 7 partitions per AZ.
+upto 100s of ec2 instances.
+a partition failure can affect ec2s but not other partitions.
+distributed application
+
+
