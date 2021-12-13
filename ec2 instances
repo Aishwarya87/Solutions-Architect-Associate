@@ -1,0 +1,33 @@
+ec2 instances purchasing options:
+1) on demand instances: short workload,predictable pricing
+  Linux or windows: pay for what you use- billing per second after the first minute
+  all other operating system: billing per hour.
+  
+  has the highest cost but no upfront pament.
+  no long term commitment; 
+  short term, uninterrupted workloads
+
+
+2) reserved(min: 1year): reserved instances for long worloads, convertible RI for long worloads with flexible instances, scheduled RI for every thursdays from 3 to 6pm
+  upto 75% discount compared to on-demand.
+  convertible RI can change the ec2 instance type, 54% discount;
+  scheduled: deprecated
+  
+
+
+3) spot instances that are less reliable, short workloads, cheap and can lose instance. 
+  90% discount as compared to on-demand
+   can lose them anytime
+   the most cost efficient
+   useful for workloads resilient to failure(batch jobs,data analysis, image processing, distributed workloads)
+   not suitable for critical jobs or databases.
+
+
+4) dedicated hosts: book an entire physical server , contol instance placement.
+  address compliance requirements, reduce costs by allowing to use your existing server-bound software licenses.
+  3 year period reservation
+  more expensive
+  
+5) dedicated instances: 
+  instances running on hardware thats dedicated to you.
+  
