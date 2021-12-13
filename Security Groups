@@ -5,7 +5,26 @@
 5) Security groups can be attached to multiple instances; are locked down to a region/VPC combination.
 6) If the application is not accessible(time out), then it's a security group issue.
 7) Connection refused error-> an application error.
-8) By default,   
+8) By default, all inbound traffic is blocked. All outbound traffic is authorised.
+
+Refer: Referencing other Security Groups Diagram.
+
+Classic Ports:
+22: SSH: Secure Shell: login into Linux Instance
+21: FTP: file transfer protocol: upload files into file share.
+22: SFTP(secure FTP): upload files using SSH
+80: HTTP: access unsecured websites.
+443: HTTPS
+3389: RDP(remote desktop protocol): log into windows instance.
+
+can have custom type with custom ports.
+
+::/0          ipv6 format
+0.0.0.0/0     ipv4 format   : for anywhere inbound rule 
+
+inbound rules for traffic to go in.
+
+
 
 
 
