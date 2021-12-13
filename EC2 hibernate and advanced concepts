@@ -21,5 +21,17 @@ an instance cannot be hibernated more than 60 days.
 uptime shows how long the instance has been running since its last restart
 uptime runs since the instance was never stopped but hibernated.
 
+advanced topic:
+1) ec2 nitro: underlying platform for the next generation of ec2 instances.
+              new virtualization, better performance(better networking, HPC,),
+              HIGHER SPEED EBS(nitro is necesssary for 64,000 EBS IOPS
+              
+2) vCPU : multiple threads running in a CPU. each thread is represented as a virtual CPU(vCPU).
+
+3) optimize CPU options: to decrease licensing cost(decrease the number of cpu cores), for HPC workloads(only one thread per CPU).
+   
+4) capacity reservations: cost saving
+
+
 
 
