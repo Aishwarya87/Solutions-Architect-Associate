@@ -1,0 +1,25 @@
+stop: the data on disk(EBS) is kept intact in the next start.
+terminate: ebs volumes(root)
+
+first start: the OS boots and the ec2 user data script is run.
+following starts: the OS boots up
+this takes time
+
+ec2 hibernate:
+the in-memory(RAM) state is preserved.
+the instance boot is faster since OS not stopped or restarted.
+under the hood: the RAM state is written into a file in the EBS volume(root).
+the root EBS volume is encrypted.
+
+use cases:
+long running processing
+saving the RAM state
+services that take time to initialize.
+
+an instance cannot be hibernated more than 60 days.
+
+uptime shows how long the instance has been running since its last restart
+uptime runs since the instance was never stopped but hibernated.
+
+
+
