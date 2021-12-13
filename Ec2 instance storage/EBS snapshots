@@ -1,0 +1,5 @@
+make a backup(snapshot) of EBS volume at a point in time.
+can copy snapshots/data across AZ or regions.
+These have to be restored/create volume again across regions.
+
+
