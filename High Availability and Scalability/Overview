@@ -1,0 +1,10 @@
+Scalability means that an applocation can handle greater loads by adapting.
+
+SCALABILITY IS LINKED BUT DIFFERENT TO HIGH AVAILABILITY.
+
+Vertical scalability: increase the size of the instance(scale up down)
+Horizontal: increase the number of instances.(scale in out); autoscaling group; load balancer 
+
+High Availability: Run instances for the same application across multiple AZ.
+
+
