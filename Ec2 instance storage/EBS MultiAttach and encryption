@@ -1,0 +1,17 @@
+MULTIATTACH for io1/io2 family.
+can attach an ebs volume to multiple ec2 instances only if it is an io1 or io2.
+use case: higher application availability in clustered Linux Application(eg: Teradata)
+
+
+ENCRYPTION:
+
+EBS encryption leverages KEYS from KMS(AES-256).
+
+ENCRYPT AN UNENCRYPTED EBS VOLUME:
+1) create an ebs volume and then snapshot
+2) encrypt the snapshot(USING COPY).
+3) create new ebs volume from the snapshot.
+4) now attach the encrypted volume to the original instance.
+
+
+
