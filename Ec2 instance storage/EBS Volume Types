@@ -1,0 +1,21 @@
+6 types:
+1) gp2/gp3(SSD): general purpose
+    cost effective, low latency
+    gp3 can independently set the IOPS and throughput individually
+    for gp2, they are linked together
+
+
+2) Provisioned IOPS SSD:
+use case: critical business aplication with sustained IOPS performance, DATABASE WORKLOADS, supports ebs multi attach.
+io1/io2(SSD): highest performance SSD 
+    independent like gp3
+
+3) Hard disk Drives: MAX throughput, cannot be a boot volume
+   st1(HDD): low cost HDD
+   sc1(HDD): lowest cost
+
+EBS volumes characterized in size, throughput, IOPS(I/O ops per sec)
+
+OVER 32000 IOPS: EC2 NITRO WITH IO1 OR IO2.
+
+
