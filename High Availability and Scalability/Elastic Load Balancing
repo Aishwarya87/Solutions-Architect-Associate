@@ -1,0 +1,14 @@
+load balancer: spreads load across multiple downstream instances
+
+Elastic load balancer: managed load balancer
+performs health checks on instances. 
+
+AWS has FOUR kinds of managed load balancers:
+1) Classic Load Balancer: 
+2) Application Load Balancer
+3) Network Load Balancer:
+4) Gateway Load Balancer
+
+Some Load Balancers can be setup as internal(private) or external(public) ELBs. 
+
+
