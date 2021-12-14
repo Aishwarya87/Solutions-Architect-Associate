@@ -1,0 +1,22 @@
+1) EBS Volumes are created for a specific AZ. It is possible to migrate them between different AZs using EBS Snapshots.
+
+2) By default, the Root volume type will be deleted as its "Delete On Termination" attribute checked by default.
+Any other EBS volume types will not be deleted as its "Delete On Termination" attribute disabled by default.
+
+3) AMIs are built for a specific AWS Region, they're unique for each AWS Region.
+You can't launch an EC2 instance using an AMI in another AWS Region, but you can copy the AMI to the target AWS Region and then use it to create your EC2 instances.
+
+4) When creating EC2 instances, you can only use the following EBS volume types as boot volumes: gp2, gp3, io1, io2, and Magnetic (Standard).
+
+5) Using EBS Multi-Attach, you can attach the same EBS volume to multiple EC2 instances in the same AZ. Each EC2 instance has full read/write permissions.
+
+6) You can encrypt an EBS volume by copying an unencrypted snapshot to an encrypted snapshot and then creating a volume from the encrypted snapshot.
+
+7) EFS is a network file system (NFS) that allows you to mount the same file system on EC2 instances that are in different AZs.
+
+8) EC2 Instance Store provides the best disk I/O performance. You don't mind losing the cache upon the termination of your EC2 instance.
+You would like to have a high-performance local cache for your application hosted on an EC2 instance.
+
+9) 64,000 is the maximum IOPS you can achieve when you're using EBS io1 or io2 volume types.
+You are running a high-performance database that requires an IOPS of 310,000 for its underlying storage. What do you recommend? use an ec2 instance store
+
