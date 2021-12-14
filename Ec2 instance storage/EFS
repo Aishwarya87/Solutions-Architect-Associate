@@ -1,0 +1,23 @@
+Elastic File System
+
+1) managed NFS(network file system) that can be mounted on many ec2s.
+2) works with ec2 instances in multi-AZ
+3) all ec2 instances can have the access to the same file usng EFS.
+4) USES NFSv4.1 protocol 
+5) uses security group to contol access to EFS. 
+6) COMPATIBLE WITH LINUX BASED AMI(NOT WINDOWS).
+
+
+PERFORMANCE MODE:set at EFS creation time.
+1) general purpose: low latency
+2) MAX I/O: higher latency, throughput, highly parallel.
+
+THROUGHPUT MODE:
+1) Bursting
+2) provisioned: small file system but need very high throughput.
+
+STORAGE TIERS(lifecycle management feature - move file after N days):
+1) standard: for frequently accessed files.
+2) infrequent access(EFS-IA): lower price. 
+
+
