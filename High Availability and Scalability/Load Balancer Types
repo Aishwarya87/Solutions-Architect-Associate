@@ -1,0 +1,7 @@
+Classic: v1: Supports TCP(Layer 4), HTTP and HTTPS(Layer 7)
+
+Application: v2: this is layer 7. Great fit for micro services and container based apllications(Docker). 
+Load Balancing to multiple HTTP applications across machines(target groups).
+
+
+
