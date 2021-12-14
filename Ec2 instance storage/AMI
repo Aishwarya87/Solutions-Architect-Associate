@@ -1,0 +1,14 @@
+Amazon Machine Image
+
+Customization of an ec2 instance.
+
+Built for a specific region and can be copied across regions.
+
+Public AMI: provided by AWS
+Our own AMI
+AWS marketplace AMI(made and sold by somebody)
+
+AMI creation decreses the bootstrap time for an instance.
+software already installed after creating in AMI.
+
+
