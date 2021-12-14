@@ -1,0 +1,14 @@
+1) Elastic IP is a public IPv4 that you own as long as you want and you can attach it to one EC2 instance at a time.
+
+2) By using Spot Block Instances, you reserve a set of Spot EC2 instances for a specified duration (1-6 hours) without interruption.
+
+3) Spot Fleet is a set of Spot Instances and optionally On-demand Instances. It allows you to automatically request Spot Instances with the lowest price.
+
+4) Cluster Placement Groups place your EC2 instances next to each other which gives you high-performance computing and networking.
+
+5) Spread Placement Group places your EC2 instances on different physical hardware across different AZs.
+
+6) Elastic Network Interfaces (ENIs) are bounded to a specific AZ. You can not attach an ENI to an EC2 instance in a different AZ.
+
+7) To enable EC2 Hibernate, the EC2 Instance Root Volume type must be an EBS volume and must be encrypted to ensure the protection of sensitive content.
+
