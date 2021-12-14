@@ -1,0 +1,10 @@
+EBS volumes are network drives with good but limited performance.
+if you need a high performance hardware disk, use EC2 instance store.
+
+these lose their storage if theyre stopped(ephemeral).
+therefore, good for buffer/cache/scratch data/temporary content.
+
+for long term storage, EBS.
+
+Local ec2 Instance Store: Very high IOPS.
+
