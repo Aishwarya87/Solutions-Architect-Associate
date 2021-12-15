@@ -1,0 +1,19 @@
+Aurora Replicas Auto Scaling:
+  to bring down the individual cpu usage: scale out 
+ 
+Aurora: Custom Endpoints:
+  for analytical queries on them; which are linked to larger instances(vertically scaled up).
+  The reader endpoint is generally not used after defining the custom endpoints.
+  use: to query only subset of aurora replicas.
+  
+Aurora Serverless:
+  
+Aurora Multi-Master:
+  immediate failover for write node(high availability)
+  
+Global Aurora:
+  Aurora Cross Region Read Replicas:
+  Aurora Global Database
+  
+Aurora ML
+
