@@ -2,6 +2,20 @@ Classic: v1: Supports TCP(Layer 4), HTTP and HTTPS(Layer 7)
 
 Application: v2: this is layer 7. Great fit for micro services and container based apllications(Docker). 
 Load Balancing to multiple HTTP applications across machines(target groups).
+Different target groups possible; one of them being instances.
+Load balancers transmit the traffic to the target groups.
 
+CLB and ALB have static host name.
+
+
+Network: Forward TCP(Layer 4) and UDP traffic to instances.
+millions of request with low latency(Extreme performance).
+NLB HAS ONE STATIC IP PER AZ.
+Target groups:ec2 instances, IP addresses, application load balancer.
+NLB HAS FIXED IPV4 ADDRESSES(can assign one fixed ip per AZ).
+allow HTTP from anywhere in the security group which is necessary for NLB. (type: HTTP; protocol: TCP)
+
+
+State: provisining || active
 
 
