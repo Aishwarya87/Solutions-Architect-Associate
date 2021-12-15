@@ -1,0 +1,10 @@
+each load balancer instance distributes evenly across all registered instances in all AZs.
+
+without cross zone:
+requests are distributed evenly in individual AZs.
+
+APPLICATION LOAD BALANCER: CZLB always on(can't be disabled). No charges for inter AZ data.
+NETWORK LB: disabled by default. You pay for inter AZ if enabled. 
+CLASSIC LB:disabled by default. no charges if enabled.
+
+
