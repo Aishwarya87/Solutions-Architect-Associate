@@ -1,0 +1,5 @@
+For CLB, connection Draining
+for ALB and NLB, Deregistration Delay
+
+waiting for existing connections to complete for an instance.
+
