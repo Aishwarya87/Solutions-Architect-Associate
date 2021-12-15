@@ -1,0 +1,20 @@
+Highly available:
+  6 copies of your data across 3AZ
+
+Shared Storage Volume::::Replication+Self Healing+Auto Expanding from 10G to 64TB
+
+One Aurora instance takes writes(master).
+
+Automated failover
+  15 read replicas(autoscaling enabled as well)
+  Cross Region Replication
+  
+Writer Endpoint- Pointing to the master
+
+READER ENDPOINT: connection load balancing: connects automatically with all the read replicas.
+Load balancing happens at the connection level; not the statement level.
+
+Authentication using IAM token(same method as RDS)::Security
+You Cant SSH.
+
+
