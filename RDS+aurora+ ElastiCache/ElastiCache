@@ -1,0 +1,35 @@
+Using ElastiCache involves heavy application code changes.
+
+DB Cache:
+if cache misses in the amazon ElastiCache, then application fetches the data from Amazon RDS.
+and then writes to cache.
+
+HELPS RELIEVE LOAD IN RDS.
+
+invalidation strategy to make sure only the most current data is used in there.
+
+USER SESSION STORE:
+
+
+CLUSTER ENGINE:
+Redis Versus MemCached:
+Redis: Multi AZ with auto-failover, read replicas and have high availability, backup and restore features.
+MemCached: No high Availability(replication), non-persistent,no backup and restore, multi-threaded , distributed
+
+
+SSL authentication
+
+CACHE SECURITY:
+  All caches in elastiCache DO NOT SUPPORT IAM AUTHENTICATION.
+  
+  RedisAUTH
+  memcached:Supports SASL based authentication(advanced).
+
+
+LazyLoading: when you dont have cache hit, then you load the data into the cache.
+WriteThrough: no stale data
+Session Store: Using TTL features.
+
+Redis Use Case:Gaming leaderboards using redis SortedSets guarantees both uniqueness and element ordering
+
+
