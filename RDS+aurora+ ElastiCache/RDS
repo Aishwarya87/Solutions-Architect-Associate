@@ -1,0 +1,8 @@
+Relational Database Service
+
+managed DB service; uses sql as query language.
+
+For RDB Auto Scaling, have to set MAXIMUM STORAGE THRESHOLD. 
+Useful for applications having unpredictable workloads. 
+
+
