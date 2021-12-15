@@ -1,0 +1,19 @@
+Secure Sockets Layer used to encrypt connections.
+TLS(Transport Layer Security), newer and MAINLY USED. 
+
+HTTPS(encrypted) 
+
+Clients can use SNI(Server Name Indication) to specify the hostname they reach.
+
+SNI:
+SNI solves the problem of loading MULTIPLE SSL CERTIFICATES ONTO ONE WEB SERVER.
+indicates the hostname
+ONLY WORKS FOR ALB and NLB(because newer).
+Using SNI, can have multiple target groups for different websites using different SSL certificates linked to the load balancer.
+
+
+Classic Load Balancer(v1) supports only one SSL cert. for multiple, use multiple CLBs.
+ALB(v2), NLB(v2) supports multiple listeners with multiple SSL certs.
+
+SSL certificates from ACM, from IAM, from import.
+
