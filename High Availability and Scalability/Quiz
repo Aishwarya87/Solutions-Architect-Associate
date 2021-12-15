@@ -1,0 +1,75 @@
+1) Scaling an EC2 instance from r4.large to r4.4xlarge is called Vertical Scalability.
+
+2) Horizontal scalability: number 
+
+3) Elastic Load Balancers provide a static DNS name. The reason being that AWS wants 
+your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes.
+
+4) ELB Sticky Session feature ensures traffic for the same client is always redirected to the same target (e.g., EC2 instance).
+This helps that the client does not lose his session data.
+QUES:Your users are complaining about the fact that the website always asks them to re-authenticate when they are moving between website pages. 
+
+5) When using an Application Load Balancer to distribute traffic to your EC2 instances, the IP address you'll receive requests from will be
+the ALB's private IP addresses. To get the client's IP address, ALB adds an additional header called "X-Forwarded-For" contains the client's IP address.
+
+6) When you enable ELB Health Checks, your ELB won't send traffic to unhealthy (crashed) EC2 instances.
+
+7) Network Load Balancer provides the highest performance and lowest latency if your application needs it.
+
+8) Application Load Balancers support HTTP, HTTPS and WebSocket
+
+9) ALBs can route traffic to different Target Groups based on URL Path, Hostname, HTTP Headers, and Query Strings.
+
+10) ALB targets cannot have NLBs.
+
+11) Network Load Balancer has one static IP address per AZ and you can attach an Elastic IP address to it.
+Application Load Balancers and Classic Load Balancers have a static DNS name.
+
+12) The following cookie names are reserved by the ELB (AWSALB, AWSALBAPP, AWSALBTG).
+
+13) When Cross-Zone Load Balancing is enabled, ELB distributes traffic evenly across all registered EC2 instances in all AZs.
+
+14) Which feature in both Application Load Balancers and Network Load Balancers allows you to load multiple SSL certificates on one listener?
+    :SNI
+    
+15) Server Name Indication (SNI) allows you to expose multiple HTTPS applications each with its own SSL certificate on the same listener. 
+
+16) Nothing will happen. The Auto Scaling Group can't go over the maximum capacity (you configured) during scale-out events.
+
+17) You can configure the Auto Scaling Group to determine the EC2 instances' health based on Application Load Balancer Health Checks instead
+of EC2 Status Checks (default). When an EC2 instance fails the ALB Health Checks, it is marked unhealthy and will be 
+terminated while the ASG launches a new EC2 instance.
+
+
+18) There's no CloudWatch Metric for "requests per minute" for backend-to-database connections.
+You need to create a CloudWatch Custom Metric, then create a CloudWatch Alarm.
+
+19) A web application hosted on a fleet of EC2 instances managed by an Auto Scaling Group. You are exposing this application through an Application
+Load Balancer. Both the EC2 instances and the ALB are deployed on a VPC with the following CIDR 192.168.0.0/18.
+How do you configure the EC2 instances' security group to ensure only the ALB can access them on port 80?
+
+Answer: Add an inbound rule with port 80 and ALB's security group as the source.
+This is the most secure way of ensuring only the ALB can access the EC2 instances. Referencing by security groups in rules is an extremely powerful rule 
+
+
+20) Default Termination Policy for Auto Scaling Group tries to balance across AZs first, then terminates based on the age of the Launch Configuration.
+Currently, 3 EC2 instances running in eu-west-2a and 4 EC2 instances running in eu-west-2b. The ASG is about to scale in. Which EC2 instance will get terminated?
+
+answer: in west 2b with the oldest Launch Template Version.
+
+21) define a Scaling Policy that will ensure the average number of connections to your EC2 instances is around 1000.
+Answer: Target Tracking Policy
+
+22) For each Auto Scaling Group, there's a Cooldown Period after each scaling activity. In this period, the ASG doesn't launch or terminate EC2 instances.
+This gives time to metrics to stabilize. The default value for the Cooldown Period is 300 seconds (5 minutes).
+
+
+23) A company has an Auto Scaling Group where random EC2 instances suddenly crashed in the past month. They can't troubleshoot why the EC2 instances crash
+as the ASG terminates the unhealthy EC2 instances and replaces them with new EC2 instances.
+What will you do to troubleshoot the issue and prevent unhealthy instances from being terminated by the ASG?
+
+Answer: Use LifeCycle hooks to pause the ec2 instance in the terminating state for troubleshoot. 
+
+
+
+
