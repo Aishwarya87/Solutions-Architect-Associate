@@ -1,0 +1,22 @@
+If the master is not encrypted, the read replicas cannot be encrypted.
+
+To enforce SSL(all clients use SSL):
+  PostgreSQL: rds.force_ssl=1 (Parameter group)
+  mySql:  grant usage on ..............REQUIRE SSL;
+  
+RDS EncryptionOperations:
+  snapshots of unencrypted are unencrypted and snaphots of encrypted RDS databases are encrypted.
+  
+  Encrypt an unencrypted RDS database:
+   create a snapshot, copy and enable encryption, restore the database, migrate applications to the new database and delete the older one.
+   
+   
+RDS security:Network and IAM:
+  IAM policies help control who can manage AWS RDS
+  
+IAM based authentication works with mySql and PostgreSQL.
+
+RDS: no ssh access, no manual db patching, no manual os patching, no way to audit the underlying instance.
+
+
+  
