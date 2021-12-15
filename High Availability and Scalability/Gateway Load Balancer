@@ -1,0 +1,15 @@
+3rd party applications (netwrok virtual appliances) to analyze and inspect.
+GWB spreads the traffic into NVA first and then either send or drop the traffic.
+Operates at layer3(Network layer)- IP packets
+
+two functions:
+TRANSPARENT NETWORK GATEWAY
+LOAD BALANCER
+
+uses the GENEVE protocol on port 6081.
+
+Target groups:
+EC2 INSTANCES
+IP ADDRESSES(must be PRIVATE IPS).
+
+
