@@ -1,0 +1,39 @@
+scale out in- numbers
+Metrics are computed for the overall ASG instances. 
+Alarms: 
+add/ decrease number of instances for a load balancer.
+
+Scaling Policies can be on CPU, network;
+IAM roles are attached to an ASG will get attached to the EC2 instances.
+
+EXTRA SAFETY with ASG:
+having instances under ASG means if they get terminated for whatever reason, the ASG will automaticaly create new ones as a replacement.
+
+DYNAMIC SCALING POLICIES:
+  Target Tracking Scaling: avg CPU around 40%
+  Simple/ Step Scaling: cpu>70% add two units
+  
+  SCHEDULED ACTIONS: on friday
+  
+Predictive Scaling: 
+  
+Good metrics to scale on:
+  CPU Utilization: 
+  RequestCountPerTarget
+  Average Ntwork In/Out
+  Any Custom Metric
+  
+After a scaling activity happens, you are in the cooldown period(default 300 seconds). During this, the ASG will not launch or terminate additional instances.
+
+Alarms: Alarm high: to scale out; Alarm low: to reduce instances
+
+ASG DEFAULT TERMINATION POLICY:
+By default, ASG tries to balance the number of instances acorss AZ.
+
+LIFECYCLE HOOKS: ability to perform extra steps before the instance goes in service(pending state) or before termination.
+
+LAUNCH TEMPLATE(newer) VERSUS LAUNCH CONFIG(legacy):
+  launch template is recommended by AWS
+  
+  
+
