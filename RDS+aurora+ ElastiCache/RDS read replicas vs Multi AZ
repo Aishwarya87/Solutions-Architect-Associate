@@ -1,0 +1,29 @@
+RDS read replicas for read scalability:
+  upto 5 read replicas
+  within AZ,Cross AZ, or cross region
+  Replication is ASYNC: eventually consistent.
+  Read replicas are used for SELECT(=read) statements(not insert,update,delete)
+  
+  In aws, theres a network cost when data goes from one AZ to other.
+  For RDS read replicas within the same region(differentAZ), you dont pay that fee.
+  us-east-1(region)
+  1a,1b-AZs
+  
+  
+RDS multi AZ(Disaster Recovery):
+  SYNC replication
+  one DNS name(automatic failover): if master gets crashed, then standby also crashes.
+  Increase availability
+  Not used for scaling(no read/write supported in instance standby)
+  CAN SETUP THE READ REPLICAS AS MULTI AZ.
+  
+  
+RDS from single AZ to multi AZ:
+  just click on "modify" for the database.
+  Internally:
+  a snapshot is taken and that is restored to create a standby DB.
+  Synchronization is established between the two databases.
+  MultiAZ; SYNChronous;
+  
+  
+  
