@@ -1,4 +1,4 @@
-Buckets are global and non-regional.
+Buckets are global and non-regional. s3 replicates data across at least 3AZs to ensure 99.99% availability and 11'9s of durability.
 
 Object Based Storage: opposed to other storage architectures.
 
@@ -34,7 +34,7 @@ After versioning: specific version ID.
 Once enabled, cannot be disabled, only suspended.
 
 Lifecycle management: after 7days, move to glacier , after 365 days permanently delete. 
-can be used together with versioning.
+can be used together with versioning. objects can be moved between storage classes using this rule.
 
 Transfer Acceleration:
 distinct URL for fast and secure transer of files over long distances
@@ -44,7 +44,7 @@ to provide access to private objects.
 
 MFA Delete:
 Only the bucket owner logged in as ROOT USER can DELETE objects from bucket.
-
+Must have versioning turned on to use.
 
 Commands:
 aws s3 ls bucketName/folderName/
