@@ -1,0 +1,59 @@
+Buckets are global and non-regional.
+
+Object Based Storage: opposed to other storage architectures.
+
+provides unlimited storage.
+
+S3 object: can store data from 0Bytes to 5TeraBytes in size
+Buckets hold objects.
+
+For Cheaper Storage: Glacier and Glacier Deep Archive(Cheapest) 
+
+One Zone IA has less availability than standard, intelligent Tiering and Standard IA.
+
+Security: All new buckets are PRIVATE when created by default. Access contol is configured using Access Control Lists and Bucket Policies(json document).
+
+Encryption: 
+Encryption in Transit
+Traffic between local host and S3 is achieved via SSL/TLS. 
+encryption at rest
+SSE. SSE-AES, SSE-KMS,SSE-C
+client side encryption
+manually
+
+Data Consistency: 
+New Object(PUTS) - Read after write consistency or immediate
+Overwrite(PUTS) or Delete objects(DELETES) - eventual consistency
+
+Cross Region Replication: 
+when enabled, any object that is uploaded will be AUTOMATICALLY REPLICATED to other regions. 
+
+S3 Versioning:
+Before versioning: null
+After versioning: specific version ID. 
+Once enabled, cannot be disabled, only suspended.
+
+Lifecycle management: after 7days, move to glacier , after 365 days permanently delete. 
+can be used together with versioning.
+
+Transfer Acceleration:
+distinct URL for fast and secure transer of files over long distances
+
+Presigned URLs: 
+to provide access to private objects.
+
+MFA Delete:
+Only the bucket owner logged in as ROOT USER can DELETE objects from bucket.
+
+
+Commands:
+aws s3 ls bucketName/folderName/
+aws s3 cp s3://bucketName/folder/pic.jpg ~/Desktop/pic.jpg  #to download
+aws s3 cp ~/Desktop/pic.jpg s3://bucketName/folder/pic.jpg  #to upload in the list
+
+
+
+
+
+
+
