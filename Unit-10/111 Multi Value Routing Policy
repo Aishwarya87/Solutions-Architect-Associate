@@ -1,0 +1,4 @@
+Used when routing traffic to multiple resources.
+
+MultiValue is NOT a substitute for having an ELB.
+
