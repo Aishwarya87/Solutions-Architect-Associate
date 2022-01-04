@@ -1,0 +1,206 @@
+Question 1
+
+
+
+
+You're trying to upload a 25 GB file on S3 and it's not working
+
+1
+The file size limit on S3 is 5GB
+2
+The S3 service must be down
+3
+You should use Multi Part upload when your file is bigger than 5GB
+
+
+Correct Answer
+
+
+3
+You should use Multi Part upload when your file is bigger than 5GB
+
+Explanation
+
+Multi Part Upload is also recommended as soon as the file is over 100MB
+
+
+Question 2
+
+
+
+
+I tried creating an S3 bucket named "dev" but it didn't work. This is a new AWS Account and I have no buckets at all. What is the cause?
+
+1
+I'm missing IAM permissions to create a bucket
+2
+Bucket names must be globally unique and "dev" is already taken
+
+
+Correct Answer
+
+
+2
+Bucket names must be globally unique and "dev" is already taken
+
+
+Question 3
+
+
+
+
+You've added files in your bucket and then enabled versioning. The files you've already added will have which version?
+
+1
+1
+2
+0
+3
+-1
+4
+null
+
+
+Correct Answer
+
+
+4
+null
+
+
+Question 4
+
+
+
+
+Your client wants to make sure the encryption is happening in S3, but wants to fully manage the encryption keys and never store them in AWS. You recommend
+
+1
+SSE-S3
+2
+SSE-KMS
+3
+SSE-C
+4
+Client Side Encryption
+
+
+Correct Answer
+
+
+3
+SSE-C
+
+Explanation
+
+Here you have full control over the encryption keys, and let AWS do the encryption
+
+
+Question 5
+
+
+
+
+Your company wants data to be encrypted in S3, and maintain control of the rotation policy for the encryption keys, but not know the encryption keys values. You recommend
+
+1
+SSE-S3
+2
+SSE-KMS
+3
+SSE-C
+4
+Client Side Encryption
+
+
+Correct Answer
+
+
+2
+SSE-KMS
+
+Explanation
+
+With SSE-KMS you let AWS manage the encryption keys but you have full control of the key rotation policy
+
+
+Question 6
+
+
+
+
+Your company does not trust S3 for encryption and wants it to happen on the application. You recommend
+
+1
+SSE-S3
+2
+SSE-KMS
+3
+SSE-C
+4
+Client Side Encryption
+
+
+Correct Answer
+
+
+4
+Client Side Encryption
+
+Explanation
+
+With Client Side Encryption you perform the encryption yourself and send the encrypted data to AWS directly. AWS does not know your encryption keys and cannot decrypt your data.
+
+
+Question 7
+
+
+
+
+The bucket policy allows our users to read/write files in the bucket, yet we were not able to perform a PutObject API call.
+
+1
+The bucket policy must be wrong
+2
+The IAM user must have an explicit DENY in the attached IAM policy
+3
+You need to contact AWS Support to lift this limit
+
+
+Correct Answer
+
+
+2
+The IAM user must have an explicit DENY in the attached IAM policy
+
+Explanation
+
+Explicit DENY in an IAM policy will take precedence over a bucket policy permission
+
+
+Question 8
+
+
+
+
+You have a website that loads files from another S3 bucket. When you try the URL of the files directly in your Chrome browser it works, but when the website you're visiting tries to load these files it doesn't. What's the problem?
+
+1
+The Bucket policy is wrong
+2
+The IAM policy is wrong
+3
+CORS is wrong
+4
+Encryption is wrong
+
+
+Correct Answer
+
+
+3
+CORS is wrong
+
+Explanation
+
+Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. 
