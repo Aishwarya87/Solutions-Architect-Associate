@@ -1,0 +1,43 @@
+infinitely scaling storage.
+
+globally unique.
+
+objects(files) have a key. 
+the key is the FULL PATH.
+the key is composed of prefix+object name:
+
+Versioning: enabled at the BUCKET LEVEL.
+
+4 methods of encrypting objects:
+  SSE-S3:keys handles and managed by AWS.
+         object is encrypted server side.
+         AES-256 encryption type.
+         Must set header : "x-amz-server-side-encryption":"AES256"
+         s3 managed data key
+  
+  SSE-KMS: keys handled and managed by KMS.
+           advantages: user control+audit trial
+           object is encrypted server side.
+           Must set header: "x-amz-server-side-encryption":"awskms"
+           KMS Customer Master Key(CMK)
+  
+  SSE-C: manage your own encryption keys. managed by the customer outside of AWS.
+         HTTPS MUST BE USED.
+         encryption key must be provided in HTTP Headers, for every HTTP request made.
+         
+  Client Side Encryption: client must encrypt data themselves before sending to S3.
+                          clients must decrypt data themselves after retrieval.
+                          customer fully manages the keys and encryption cycle.
+                          HTTP or HTTPS.
+                          
+ Amazon S3 exposes:
+ HTTP endpoint: non encrypted
+ HTTPS endpoint: encryption in flight (SSL/TLS)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
