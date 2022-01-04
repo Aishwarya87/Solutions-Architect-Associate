@@ -1,0 +1,3 @@
+Route 53 performs a MANDATORY health check on Primary and
+have secondary in case of failover for disaster recovery.
+
