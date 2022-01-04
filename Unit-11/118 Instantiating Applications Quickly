@@ -1,0 +1,9 @@
+ec2 instances:
+  use a Golden AMI
+  bootstrap using User Data: for dynamic config, use user data scripts.
+  Hybrid: mix the above two.
+  
+RDS databases: restore from a snapshot
+
+EBS volumes: Restore from a snapshot.
+
