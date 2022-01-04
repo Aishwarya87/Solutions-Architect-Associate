@@ -1,0 +1,4 @@
+Controls the % of the requests that go to a specific endpoint.
+Helpful to split traffic between two regions.
+can be associated with health checks.
+
