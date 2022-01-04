@@ -1,0 +1,16 @@
+is a managed DNS(Domain Name System).
+DNS- Collection of rules and records 
+
+The most common records:
+  A: hostname to IPv4
+  AAAA: hostname to IPv6
+  CNAME: hostname to hostname
+  Alias: hostname to AWS resource.
+  
+  
+Web Browser makes a DNS request to route53 through hostname(myapp.mydomain.com) and gets back an IP; hence A record
+Web Browser makes a HTTP request to an application server with an http IP and gets back an http response.
+
+Route53 can use: public domain names(.com) or private domain names(.internal).
+has advanced features: Load Balancing, health checks, routing policies.
+
