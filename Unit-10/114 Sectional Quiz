@@ -1,0 +1,161 @@
+Question 1
+
+
+
+
+You have purchased "mycoolcompany.com" on the AWS registrar and would like for it to point to lb1-1234.us-east-2.elb.amazonaws.com . 
+What sort of Route 53 record is NOT POSSIBLE to set up for this?
+
+1
+CNAME
+2
+Alias
+
+
+Correct Answer
+
+
+1
+CNAME
+
+Question 2
+
+
+
+
+You have deployed a new Elastic Beanstalk environment and would like to direct 5% of your production traffic to this new environment, 
+in order to monitor for CloudWatch metrics and ensuring no bugs exist. What type of Route 53 records allows you to do so?
+
+1
+Simple
+2
+Weighted
+3
+Latency
+4
+Failover
+
+
+Correct Answer
+
+
+2
+Weighted
+
+Explanation
+
+Weighted allows you to redirect a part of the traffic based on a weight (hence a percentage). 
+It's common to use to send a part of a traffic to a new application you're deploying
+
+Question 3
+
+
+
+
+After updating a Route 53 record to point "myapp.mydomain.com" from an old Load Balancer to a new load balancer, 
+it looks like the users are still not redirected to your new load balancer. You are wondering why...
+
+1
+it's because of the alias record!
+2
+it's because of the CNAME record!
+3
+it's because of the TTL
+4
+it's because of the health checks
+
+
+Correct Answer
+
+
+3
+it's because of the TTL
+
+Explanation
+
+DNS records have a TTL (Time to Live) in order for clients to know for how long to caches these values and not overload the DNS with DNS requests. 
+TTL should be set to strike a balance between how long the value should be cached vs how much pressure should go on the DNS.
+
+Question 4
+
+
+
+
+You want your users to get the best possible user experience and that means minimizing the response time from your servers to your users. Which routing policy will help?
+
+1
+Multi Value
+2
+Weighted
+3
+Latency
+4
+Geo location
+
+
+Correct Answer
+
+
+3
+Latency
+
+Explanation
+
+Latency will evaluate the latency results and help your users get a DNS response that will minimize their latency (e.g. response time)
+
+Question 5
+
+
+
+
+You have a legal requirement that people in any country but France should not be able to access your website. Which Route 53 record helps you in achieving this?
+
+1
+Latency
+2
+Simple
+3
+Geolocation
+4
+Multi Value
+
+
+Correct Answer
+
+
+3
+Geolocation
+
+
+Question 6
+
+
+
+
+You have purchased a domain on Godaddy and would like to use it with Route 53. What do you need to change to make this work?
+
+1
+Request for a domain transfer
+2
+Create a private hosted zone and update the 3rd party registrar NS records
+3
+Create a public hosted zone and update the Route 53 NS records
+4
+Create a public hosted zone and update the 3rd party registrar NS records
+
+
+Correct Answer
+
+
+4
+Create a public hosted zone and update the 3rd party registrar NS records
+
+Explanation
+
+Private hosted zones are meant to be used for internal network queries and are not publicly accessible. Public Hosted Zones 
+are meant to be used for people requesting your website through the public internet. Finally, NS records must be updated on the 3rd party registrar.
+
+
+
+
+
