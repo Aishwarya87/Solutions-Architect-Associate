@@ -1,0 +1,4 @@
+when you need to redirect to a single resource.
+
+IF MULTIPLE VALUES are returned, a RANDOM one is chosen by THE CLIENT.
+
