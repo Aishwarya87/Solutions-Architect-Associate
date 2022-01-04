@@ -1,0 +1,6 @@
+Have X health check failed =>unhealthy(default 3)
+
+ABOUT 15 HEALTH CHECKERS will check the endpoint health.
+
+Health Checks can be linked to Route53 DNS queries.
+
