@@ -1,0 +1,6 @@
+Ability to SHIFT MORE TRAFFIC TO RESOURCES based on the defined bias.
+specify bias values: 
+  to expand(1 to 99)- more traffic to the resource)
+  to shrink(-1 to -99)- less traffic to the resource.
+  
+  
