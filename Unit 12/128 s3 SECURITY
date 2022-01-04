@@ -1,0 +1,19 @@
+User Based: IAM policies
+
+Resource Based: 
+bucket policies
+Object ACL(Access Control List)
+Bucket ACL
+
+an IAM principal can access an s3 object if 
+the user IAM permissions allow it OR the resource policy allows it
+AND there's no explicit DENY.
+
+
+Bucket Policies were created to prevent company data leaks.
+
+User Security:
+  Pre-signed urls: urls are valid only for a limited time.(ex: premium video service for logged in users).
+  
+If you get a 403(Forbidden) error, make sure the bucket policy allows public reads!
+
