@@ -4,3 +4,9 @@ eg: GoDaddy, Google Domains, Route53;
 
 DOMAIN REGISTRAR != DNS
 
+If you buy your domain on 3rd Party website,you can still use Route53.
+ 
+ 1) Create a hosted Zone in Route53.
+ 2) Update NS records on 3rd party website to use Route 53 name servers.
+ 
+ 
