@@ -1,0 +1,8 @@
+Cname: Only for NON ROOT DOMAIN (something.mydomain.com)
+
+alias: points a hostname to an AWS resource(app.mydomain.com to blabla.amazonaws.com)
+  works for root domain and non root domain (aka mydomain.com)
+  free of charge
+  native health check
+  
+  
