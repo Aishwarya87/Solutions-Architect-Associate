@@ -1,0 +1,161 @@
+Question 1
+
+
+
+
+You have an ASG that scales on demand based on the traffic going to your new website: TriangleSunglasses.Com. You would like to optimise for cost, so you have selected an ASG that scales based on demand going through your ELB. Still, you want your solution to be highly available so you have selected the minimum instances to 2. How can you further optimize the cost while respecting the requirements?
+
+1
+Remove the ELB and use Elastic IP instead
+2
+Reserve two EC2 instances
+3
+Reduce the minimum number of instances to 1.
+4
+Reduce the minimum number of instances to 0.
+
+
+Correct Answer
+
+
+2
+Reserve two EC2 instances
+
+Explanation
+
+This is the way to save further costs as we know we will run 2 EC2 instances no matter what.
+
+
+Question 2
+
+
+
+
+Which of the following will NOT help make our application tier stateless?
+
+1
+Offload data in RDS
+2
+Store the session data in ElastiCache
+3
+Send the session data through the client cookies
+4
+Storing shared data on EBS volumes
+
+
+Correct Answer
+
+
+4
+Storing shared data on EBS volumes
+
+Explanation
+
+EBS volumes are created for a specific AZ and can only be attached to one EC2 instance at a time. This will not help make our application stateles
+
+
+Question 3
+
+
+
+
+You are looking to store shared software updates data across 100s of EC2 instances. The software updates should be dynamically loaded on the EC2 instances and shouldn't require heavy operations. What do you suggest?
+
+1
+Store the software updates on EBS and sync them using data replication software from one master in each AZ
+2
+Store the software updates on EFS and mount EFS as a network drive
+3
+Package the software updates as an EBS snapshot and create EBS volumes for each new software updates.
+4
+Store the software updates on an Amazon RDS instance
+
+
+Correct Answer
+
+
+2
+Store the software updates on EFS and mount EFS as a network drive
+
+Explanation
+
+EFS is a network file system (NFS) and allows to mount the same file system to 100s of EC2 instances. Publishing software updates their allow each EC2 instance to access them.
+
+
+Question 4
+
+
+
+
+As a solution architect managing a complex ERP software suite, you are orchestrating a migration to the AWS cloud. The software traditionally takes well over an hour to setup on a Linux machine, and you would like to make sure your application does leverage the ASG feature of auto scaling based on the demand. How do you recommend you speed up the installation process?
+
+1
+Use a Golden AMI
+2
+Bootstrap using User Data
+3
+Store the application in RDS
+4
+Retrieve the application setup files from EFS
+
+
+Correct Answer
+
+
+1
+Use a Golden AMI
+
+Explanation
+
+Golden AMI are a standard in making sure you snapshot a state after an application installation so that future instances can boot up from that AMI quickly.
+
+
+Question 5
+
+
+
+
+I am creating an application and would like for it to be running with minimal cost in a development environment with Elastic Beanstalk. I should run it in
+
+1
+Single Instance Mode
+2
+High Availability Mode
+
+
+Correct Answer
+
+
+1
+Single Instance Mode
+
+Explanation
+
+This will create one EC2 instance and one Elastic IP
+
+
+Question 6
+
+
+
+
+My deployments on Elastic Beanstalk have been painfully slow, and after looking at the logs, I realize this is due to the fact that my dependencies are resolved on each EC2 machine at deployment time. How can I speed up my deployment with the minimal impact?
+
+1
+Remove some dependencies in your code
+2
+Place the dependencies in Amazon EFS
+3
+Create a Golden AMI that contains the dependencies and launch the EC2 instances from that.
+
+
+Correct Answer
+
+
+3
+Create a Golden AMI that contains the dependencies and launch the EC2 instances from that.
+
+Explanation
+
+Golden AMI are a standard in making sure save the state after the installation or pulling dependencies so that future instances can boot up from that AMI quickly.
+
