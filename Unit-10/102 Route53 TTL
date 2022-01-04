@@ -1,0 +1,10 @@
+TTL is mandatory for each DNS record.
+
+High TTL: eg 24hr
+  Less Traffic on DNS
+  Possibly outdated records
+  
+Low TTL(eg 60 s)
+  More traffic, records are outdated for less time.
+  
+  
