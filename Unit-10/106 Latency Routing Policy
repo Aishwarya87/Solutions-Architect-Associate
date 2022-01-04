@@ -1,0 +1,4 @@
+Redirects to the server that has the least latency close to us.
+
+Latency is evaluated in terms of user to designated AWS region.
+
