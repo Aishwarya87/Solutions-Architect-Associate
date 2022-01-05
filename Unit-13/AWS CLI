@@ -1,0 +1,13 @@
+aws s3 cp s3://thebucketofaishwarya/coffee.jpg coffee.jpg
+#copies to local file system
+
+aws s3 mb s3://aishwarya_1
+#makes bucket
+
+aws s3 ls
+#lists all the buckets
+
+aws s3 rb s3://aishwarya_1
+# removes the empty bucket
+
+
