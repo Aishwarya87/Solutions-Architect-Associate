@@ -1,0 +1,7 @@
+Presigned URLs use cases: 
+  allow only logged in users to download a premium video on your s3 bucket.
+  allow an ever changing list of users to download files by generating URLs dynamically.
+  temporarily allow a user to upload a file to a precise location in a bucket.
+  
+
+  
