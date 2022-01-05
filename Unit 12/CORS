@@ -1,0 +1,20 @@
+Cross-Origin Resource Sharing
+WEB BROWSER based mechanism to allow requests to other origins while visiting the main origin.
+
+same origin: https://example.com/app1
+             https://example.com/app2
+
+different origins: https://example.com
+                   https://other.example.com
+                   
+The requests wont be fulfilled unless the other region allows for the requests using CORS Headers(ex: access control allow region).
+
+web browser makes a preflight request to the cross origin and gets a preflight response and that determines if the web browser can make requests or not.
+
+S3 cors:
+    if a client makes a cross origin request on the s3 bucket,  we need to enable the correct CORS headers.
+    
+    You can allow for a specific origin or * for all origins.
+    
+    
+    
