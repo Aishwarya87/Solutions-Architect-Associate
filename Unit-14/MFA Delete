@@ -1,0 +1,7 @@
+To use MFA Delete, enable versioning on the S3 bucket.
+you will need MFA to:
+  permanently delete an object version.
+  suspend versioning on the bucket.
+  
+Only the bucket owner (root account) can enable/disable MFA-Delete.
+
