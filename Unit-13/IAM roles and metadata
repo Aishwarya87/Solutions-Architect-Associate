@@ -1,0 +1,16 @@
+Policies are attached to a Role.
+
+eg of a policy: AmzonS3FullAccess; AmazonS3ReadOnlyAccess
+
+AWS EC2 instance Metadata:
+  it allows ec2 instances to learn about themselves WITHOUT USING AN IAM ROLE.
+  https://169.254.169.254/latest/meta-data
+  You can retrieve the IAM role name from the metadata, but CANNOT retrieve the IAM policy.
+  used with a curl command.
+  
+AWS SDK:
+  If you dont specify or configure a default region, then us-east-1 will be chosen by default.
+  used to code against AWS services.
+  
+  
+  
