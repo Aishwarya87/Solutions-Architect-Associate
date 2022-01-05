@@ -1,0 +1,99 @@
+Question 1
+
+
+
+
+My EC2 Instance does not have the permissions to perform an API call PutObject on S3. What should I do?
+
+1
+I should run `aws configure` and insert my personal credentials, because I have access to PutObject on S3
+2
+I should ask an administrator to attach a Policy to the IAM Role on my EC2 Instance that authorises it to do the API call
+3
+I should export the environment variables with my credentials on the EC2 Instance
+4
+I should use the EC2 Metadata API call
+
+
+Correct Answer
+
+
+2
+I should ask an administrator to attach a Policy to the IAM Role on my EC2 Instance that authorises it to do the API call
+
+Explanation
+
+IAM roles are the right way to provide credentials and permissions to an EC2 instance
+
+
+Question 2
+
+
+
+
+I have an on-premise personal server that I'd like to use to perform AWS API calls
+
+1
+I should run `aws configure` and put my credentials there. Invalidate them when I'm done
+2
+I should attach an EC2 IAM Role to my personal server
+
+
+Correct Answer
+
+
+1
+I should run `aws configure` and put my credentials there. Invalidate them when I'm done
+
+Explanation
+
+Even better would be to create a user specifically for that one on-premise server
+
+
+Question 3
+
+
+
+
+I need my colleagues help to debug my code. When he runs the application on his machine, it's working fine, whereas I get API authorisation exceptions. What should I do?
+
+1
+Send him my AWS access key and secret key so he can replicate the issue on his machine
+2
+Ask him to send me his credentials so I can start working
+3
+Compare his IAM policy and my IAM policy in the policy simulator to understand the differences
+4
+Ask him to create an EC2 server and puts his credentials there so I can run the application from the EC2 Instance
+
+
+Correct Answer
+
+
+3
+Compare his IAM policy and my IAM policy in the policy simulator to understand the differences
+
+
+Question 4
+
+
+
+
+To get the instance id of my EC2 machine from the EC2 machine, the best thing is to...
+
+1
+Create an IAM role and attach it to my EC2 instance so I can perform a "describe" API call
+2
+Query the user data at http://169.254.169.254/latest/user-data
+3
+Query the meta data at http://169.254.169.254/latest/meta-data
+4
+Query the meta data at http://254.169.254.169/latest/meta-data
+
+
+Correct Answer
+
+
+3
+Query the meta data at http://169.254.169.254/latest/meta-data
+
