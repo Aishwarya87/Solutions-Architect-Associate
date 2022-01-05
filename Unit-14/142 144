@@ -1,0 +1,20 @@
+Access Logs:
+Warning: Do not set your logging bucket to be the application bucket otherwise
+  it will create a logging loop and your bucket will grow in size exponentially.
+  
+S3 Replication:
+  CRR and SRR(Cross region replication || same region replication)
+  
+  1) MUST ENABLE VERSIONING in source and destination
+  2) Buckets can be in different accounts.
+  3) Copying is asynchronous.
+  4) must give proper IAM permissions to s3.
+  5) CRR use cases: compliance, lower latency access, replication across accounts.
+  6) SRR: log aggregation, live replication. 
+  
+  After activating, only the new objects are replicated.
+  Any delete operation is NOT replicated.
+  No chaining(transitivity) in replication.
+  
+  
+  
