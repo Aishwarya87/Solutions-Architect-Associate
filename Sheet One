@@ -1,0 +1,53 @@
+1) Use the IAM role because it uses temporary security credentials.
+
+2) Vault Operations in Amazon Glacier - use amazon SNS, SQS, asynchronous
+
+3) high availability and failover support- multi AZ deployment
+
+4) 256 kb *4 = IOPS
+
+5) in amazon route 53, cannot create a hosted zone on top level domain.
+
+6) the total volume of data and num of archives can store are unlimited in Amazon Glacier.
+
+7) Add a bucket policy to the bucket to minimize the task of assigning to each bucket.
+
+8) CIDR as 32 while configuring a security group.
+
+9) ASG automatically creates a launch config for an ec2 instance.
+
+10) High availability: Multi AZ deployment.
+
+11) DynamoDB: nosql database.
+    
+12) Origin Access identity: CloudFront integration with S3.
+
+13) You can SUSPEND SCALING in ASG.
+
+14) Clouwatch Alarm: OK, INSUFFICIENT_DATA, ALARM.
+
+15) control access to ec2 instances: ec2 Security Groups. [Access Control]
+
+iam policies what the users are allowed to perform or not.
+
+16) NACL is attached only to the subnets and not the instances.
+
+17) To create a snapshot for amazon ebs volumes that serve as root devices(c drive, linux), you should stop the instance before taking the snapshot.
+
+18) Updates to DB are synchronously replicated across multi AZs; combats failover
+
+19) Execution Role: permissions on lambda.
+
+20) cannot access --> bucket policies || iam user policy
+
+21) amazon sqs is a distributed .
+
+22) /dev/sda1  : reserved for the root device.
+
+23) the settings will be effective immediately for security groups.
+
+24) All traffic should be routed via Internet Gateway. so, a route should be created with 0.0.0.0/0 as a source.
+
+25) deafualt access keys per use: 2
+
+26) 
