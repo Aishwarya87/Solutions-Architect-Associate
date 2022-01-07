@@ -1,0 +1,13 @@
+Transition objects bw storage classes.
+
+For infrequent accessed object, move them to Standard_IA.
+
+For archive objects you dont need in real time, GLACIER or DEEP ARCHIVE.
+
+TRANSITION ACTIONS: 
+
+EXPIRATION ACTIONS: configure objects to delete after some time. 
+  can also be used to DELETE OLD VERSIONS of file(if versioning is enabled).
+  
+Scenario 1:
+  Your application on ec2 creates images thumbnails after profile photos are uploaded to amazon S3. These thumbnails can be easily recreated, and 
