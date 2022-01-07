@@ -1,0 +1,42 @@
+Amazon S3 standard- general purpose
+  High durability(objects not lost)
+  High availability
+  BigData use case
+  
+s3 standard- IA
+  Same durability as s3 standard
+  a little less availability
+  low cost compared to standard
+  data store for disaster recovery, backups
+  
+s3 One Zone- IA 
+  Same as IA but data in a single AZ.
+  Same durability but data lost when AZ is destroyed.
+  Lesser availability
+  secondary backup copies of on-premise data
+  
+s3 Intelligent Tiering
+  switched objects between standard and IA based on number of accesses.
+
+
+glacier
+  Alternative to on-premise magnetic tape storage
+  data retained for years.
+  archiving/backup.
+  very low cost
+  archive: each item in glacier ==upto 40Tb
+  archives are stored in vaults.
+  
+  3 retrieval options:
+    expedited(1 to 5 mins) == costly == for files that you need urgently.
+    standard(3 to 5hours)
+    Bulk(5 to 12 hours)
+    Minimum storage duration of 90days.
+  
+
+Glacier Deep Archive
+  for super long term storage   
+  cheaper
+  Standard(12 hours)
+  Bulk(48 hours)
+  Minimum storage duration of 180 days.
