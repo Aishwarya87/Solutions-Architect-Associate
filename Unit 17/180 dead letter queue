@@ -1,0 +1,4 @@
+after the MAXIMUMRECEIVES threshold is exceeded, the message goes into a Dead Letter Queue(DLQ).
+
+useful for DEBUGGING.
+
