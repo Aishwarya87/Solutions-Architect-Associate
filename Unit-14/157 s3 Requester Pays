@@ -1,0 +1,5 @@
+With requester Pays buckets, the requester instead of the bucket owner pays the cost of the request and the data download from the bucket.
+
+helpful when want to share large datasets with other accounts.
+
+the requester must be authenticated in AWS.
