@@ -1,0 +1,21 @@
+Global users for our application.
+
+Unicast IP(one serevr holds one ip) || anycast IP(all servers hold the same ip and the client is routed to the nearest one):
+
+the concept of edge location to interact in a private aws netwrok.
+
+2 ANYCAST IP are created for the application.
+
+Works with Elastic IP, ec2 instances, ALB, NLB, public or private.
+
+CloudFront: 
+  for cacheable content(images/videos)
+  Dynamic content
+
+Global accelerator(newer):
+  for wide range of applications over TCP or UDP.
+  static IP addresses.
+  for gaming(UDP), IoT(MQTT), 
+  fast regional failover
+  
+  
