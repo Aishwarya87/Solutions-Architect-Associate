@@ -1,0 +1,6 @@
+You can setup s3 analytics to help determine when to transition objects from Standard to Standard IA.
+
+Does not work for OneZone or Glacier.
+
+Good first step to improve the lifecycle rules.
+
