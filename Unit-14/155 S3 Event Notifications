@@ -1,0 +1,12 @@
+React to events happening in s3.
+
+USE CASE: generate thumbnails of images uploaded to s3.
+
+Three targets for event notification:
+SNS
+SQS
+Lambda function
+
+Can create as many S3 events as desired.
+
+versioning has to be enabled.
