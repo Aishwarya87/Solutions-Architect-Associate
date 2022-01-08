@@ -1,0 +1,14 @@
+you want to distribute paid shared content to premium users of the world.
+
+signed url: access to individual files(one signed url per file).
+
+signed cookeis: access to multiple files
+
+CF signed URL:
+  allows access to the CF.
+  
+s3 Presigned URL:
+  uses the IAM key of the signing IAM principal.
+  allows access to the bucket directly.
+  
+  
