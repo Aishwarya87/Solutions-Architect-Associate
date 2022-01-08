@@ -1,0 +1,42 @@
+aws is pushing for hybrid cloud.
+
+Block Storage:
+  EBS
+  ec2 instance store
+  
+file Storage:
+  EFS
+  FSx
+  
+object storage:
+  amazon s3
+  amazon glacier
+  
+AWS storage gateways:
+  File gateway:
+    Integrated w ACTIVE DIRECTORY(AD) for user authentication.
+    Configured s3 buckets are accessible using the NFS and SMB protocol.
+    
+  Volume Gateway:
+    cached volumes: low latency access to most recent data.
+    stored volume: entire dataset is on premise; scheduled backups on s3.
+    block storage using iSCSI protocol backed by s3.
+    snapshots of s3 as well.
+  
+  
+  Tape gateway:
+    Virtual tapes stored in s3. archived tapes in glacier.
+    
+  Storage gateway- hardware appliance:
+    works with the abive mentioned gateways.
+    where you do not have virtualization.
+    
+    
+ On premises data to the cloud => Storage gateway
+ 
+ file access/NFS - user auth with AD  => file gateway(backed by s3).
+ volumes/block storage/ Iscsi => volume gateway
+ 
+  
+  
+  
