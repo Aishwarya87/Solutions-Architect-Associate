@@ -10,4 +10,22 @@ EXPIRATION ACTIONS: configure objects to delete after some time.
   can also be used to DELETE OLD VERSIONS of file(if versioning is enabled).
   
 Scenario 1:
-  Your application on ec2 creates images thumbnails after profile photos are uploaded to amazon S3. These thumbnails can be easily recreated, and 
+  Your application on ec2 creates images thumbnails after profile photos are uploaded to amazon S3. These thumbnails can be easily recreated, and only need to be kept for 45 days.
+  The source images should be able to able to be immediately retrieved for these 45 days and afterwards, the user can wait upto 6 hours. How would you design tthis?
+  
+  s3 source images can be on STANDARD with a lifecycle config to transition them to glacier after 45 days[archived + 6 hours]
+  
+  s3 thumbnails on ONEZONE-IA[recreated] with a lifecycle config to expire them after 45 days.
+  
+Scenario 2:
+  A rule in your company states that you should be able to recover your s3 objects immediately for 15days, althoough this may happen very rarely. 
+  After this time and for upto 365 days, deleted objects should be recoverable within 48 hours. 
+  
+  You need to enable s3 versioning in order to have object versions, so that "deleted objects" are in fact hidden by a "delete marker" and can be recovered.
+  
+  You can transition these "noncurrent versions" of the object to S3_IA.
+  
+  You can transition afterwards these "noncurrentversions" to DEEP ARCHIVE.
+  
+  
+  
