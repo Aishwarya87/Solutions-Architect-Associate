@@ -1,0 +1,17 @@
+EFS is a shared posix system for linux systems.
+
+for distributed file system.
+fsx for windows is a fully managed WINDOWS file system share drive.
+
+supports SMB PROTOCOL AND WINDOWS NTFS.
+
+amazon fsx for Lustre:
+  from linux and cluster.
+  for large scale computing.
+  for HPC(HIGH PERFORMANCE COMPUTING).
+  
+  SEAMLESS INTEGRATION WITH S3: 
+    can read s3 as a file system.
+    can write the computations back to s3.
+    [through fsx].
+    
