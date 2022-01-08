@@ -1,0 +1,8 @@
+after a message is polled by a consumer, it becomes invisible to other consumers.
+
+by default, 30 SECONDS.
+
+if a message is not processed within the visibility timeout,  it will be processed twice.
+
+a consumer could call the ChangeMessageVisibility api to get more time.
+
