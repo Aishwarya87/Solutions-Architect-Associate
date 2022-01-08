@@ -1,0 +1,28 @@
+Your application can acheieve atleast 3500 PUT/COPY/POST/DELETE and 5500 GET/HEAD requests per second per prefix in a bucket.
+
+object path => prefix
+bucket/1/file => /1/
+
+bucket/folder1/sub1/file => /folder1/sub1/
+
+S3- KMS limitation:
+
+  When you upload, it calls the GenerateDtaKey KMS api
+  When you download, it calls the Decrypt KMS api.
+  
+  We have KMS quota per second based on region. and if restricted, cannot request a quota increase in KMS.
+  
+s3 Performance:
+  Multi Part Upload: recommended for files> 100Mb
+                     must use for files>5 GB.
+                     
+      parallelizes uploads; speeds up transfers.
+      
+      
+  s3 Tranfer Acceleration: for upload/download
+    minimzes the amount of public internet that we go through and we maximize the amount of private aws network that we go through.
+    
+  s3 Byte Range fetches: USED TO SPEED UP DOWNLOADS. parallelizes GETS.
+                         RETREIVE ONLY PARTIAL DATA. (for eg: the head of the file).
+                         
+                         
