@@ -1,0 +1,18 @@
+used to decouple applications.
+
+unlimited throughput.
+
+the message is persisted in sqs until a consumer deletes it. 
+
+consumers delete messages after processing them.
+
+we can scale consumers horizontally to improve throughput of processing.
+
+sqs w asg: 
+  consumers in asg.
+Cloudwatch metric: queue length: approximate number of messages.
+alarm for breach: cloudwatch alarm.
+the alram scales the asg.
+
+backend processing application(video processing) to receieve messages, process the videos and insert into s3 bucket.
+
