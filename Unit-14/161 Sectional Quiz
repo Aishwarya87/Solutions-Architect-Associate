@@ -1,0 +1,232 @@
+
+
+
+
+
+
+
+Question 1
+
+
+
+
+You have enabled versioning and want to be extra careful when it comes to deleting files on S3. What should you enable to prevent accidental permanent deletions?
+
+1
+Use a bucket policy
+2
+Enable MFA Delete
+3
+Encrypt the files
+4
+Disable versioning
+
+
+Correct Answer
+
+
+2
+Enable MFA Delete
+
+Explanation
+
+MFA Delete forces users to use MFA tokens before deleting objects. It's an extra level of security to prevent accidental deletes
+
+
+Question 2
+
+
+
+
+You would like all your files in S3 to be encrypted by default. What is the optimal way of achieving this?
+
+1
+Use a Bucket Policy that forces HTTPS connections
+2
+Enable "Default Encryption" on S3
+3
+Enable versioning
+
+
+Correct Answer
+
+
+2
+Enable "Default Encryption" on S3
+
+
+Question 3
+
+
+
+
+You suspect some of your employees to try to access files in S3 that they don't have access to. How can you verify this is indeed the case without them noticing?
+
+1
+Restrict their IAM policies and look at CloudTrail logs
+2
+Enable S3 Access Logs and analyze them using Athena
+3
+Use a bucket policy
+
+
+Correct Answer
+
+
+2
+Enable S3 Access Logs and analyze them using Athena
+
+Explanation
+
+S3 Access Logs log all the requests made to buckets, and Athena can then be used to run serverless analytics on top of the logs files
+
+
+Question 4
+
+
+
+
+You are looking for your entire S3 bucket to be available fully in a different region so you can perform data analysis optimally at the lowest possible cost. Which feature should you use?
+
+1
+CloudFront distributions
+2
+S3 Cross Region Replication
+3
+S3 versioning
+4
+S3 Websites
+
+
+Correct Answer
+
+
+2
+S3 Cross Region Replication
+
+Explanation
+
+S3 CRR is used to replicate data from an S3 bucket to another one in a different region
+
+
+Question 5
+
+
+
+
+You are looking to provide temporary URLs to a growing list of federated users in order to allow them to perform a file upload on S3 to a specific location. What should you use?
+
+1
+S3 CORS
+2
+S3 Pre-Signed URL
+3
+S3 Bucket Policies
+4
+IAM Users
+
+
+Correct Answer
+
+
+2
+S3 Pre-Signed URL
+
+Explanation
+
+Pre-Signed URL are temporary and grant time-limited access to some actions in your S3 bucket.
+
+
+Question 6
+
+
+
+
+How can you automate the transition of S3 objects between their different tiers?
+
+1
+Use AWS Lambda
+2
+Use CloudWatch Events
+3
+Use S3 Lifecycle Rules
+
+
+Correct Answer
+
+
+3
+Use S3 Lifecycle Rules
+
+
+Question 7
+
+
+
+
+Which of the following is NOT a Glacier retrieval mode?
+
+1
+Instant (10 seconds)
+2
+Expedited (1 to 5 minutes)
+3
+Standard (3 to 5 hours)
+4
+Bulk (5 to 12 hours)
+
+
+Correct Answer
+
+
+1
+Instant (10 seconds)
+
+
+Question 8
+
+
+
+
+Which of the following is a Serverless data analysis service allowing you to query data in S3?
+
+1
+S3 Analytics
+2
+Athena
+3
+Redshift
+4
+RDS
+
+
+Correct Answer
+
+
+2
+Athena
+
+
+Question 9
+
+
+
+
+You are looking to build an index of your files in S3, using Amazon RDS PostgreSQL. To build this index, it is necessary to read the first 250 bytes of each object in S3, which contains some metadata about the content of the file itself. There is over 100,000 files in your S3 bucket, amounting to 50TB of data. how can you build this index efficiently?
+
+1
+Use the RDS Import feature to load the data from S3 to PostgreSQL, and run a SQL query to build the index
+2
+Create an application that will traverse the S3 bucket, read all the files one by one, extract the first 250 bytes, and store that information in RDS.
+3
+Create an application that will traverse the S3 bucket, issue a Byte Range Fetch for the first 250 bytes, and store that information in RDS.
+4
+Create an application that will traverse the S3 bucket, use S3 select to get the first 250 bytes, and store that information in RDS.
+
+
+Correct Answer
+
+
+3
+Create an application that will traverse the S3 bucket, issue a Byte Range Fetch for the first 250 bytes, and store that information in RDS.
+
