@@ -1,0 +1,15 @@
+You can reduce the number of edge locations for COST REDUCTION.
+
+Origin Groups(primary/secondary): 
+  for high availability and do failover
+  if the primary origin fails, the second one is used.
+  
+  
+Region Level High Availability: 
+  s3[Replication] + CloudFront 
+  
+Field Level encryption: 
+  adds an additional layer of security along with HTTPS.
+  only the eb server can decrypt it using the private key.
+  data not accessible to the CF or the application load balancer. 
+  
