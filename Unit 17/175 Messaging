@@ -1,0 +1,13 @@
+Synchronous communication: 
+  application to application
+  one to one
+  
+Asynchronous communication:
+  application to queue to application.
+  
+Decouple your applications: 
+  using sqs: queue model
+  sns: pub/sub
+  kinesis: real time streaming
+  
+  
