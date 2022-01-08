@@ -1,0 +1,18 @@
+Glacier Vault Lock:
+  WORM model[write once read many]
+  objects cant be deleted once stored in the Glacier Lock.
+  policy cannot be deleted itself.
+  Cannot be changed at all as well.
+  
+s3 Object Lock[versioning must be enabled]
+  Blocks an object version deletion for a speicified amount of time.
+  Object Retention: 
+    Retention Period: specifies a fixed period
+    Legal Hold: same protection, no expiry date.
+    
+  Modes:
+    Governance Mode: users cant until they have special permissions.
+    Compliance Mode: even the root user cant change till its retention period is released.
+                     Higher level of restriction.
+                     
+                     
