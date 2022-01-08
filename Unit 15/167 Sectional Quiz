@@ -1,0 +1,173 @@
+
+
+
+
+
+
+
+Question 1
+
+
+
+
+Which features allows us to distribute paid content from S3 securely, globally, if the S3 bucket is secured to only exchange data with CloudFront?
+
+1
+Origin Access Identity
+2
+S3 Pre-Signed URL
+3
+CloudFront Signed URL
+4
+CloudFront Distribution Invalidations
+
+
+Correct Answer
+
+
+3
+CloudFront Signed URL
+
+Explanation
+
+CloudFront Signed URL are commonly used to distribute paid content through dynamic CloudFront Signed URL generation.
+
+
+Question 2
+
+
+
+
+You are hosting highly dynamic content in Amazon S3 in us-east-1. Recently, there has been a need to make that data available with low latency in Singapore. What do you recommend using?
+
+1
+CloudFront
+2
+S3 Cross Region Replication
+3
+S3 Pre-Signed URLs
+
+
+Correct Answer
+
+
+2
+S3 Cross Region Replication
+
+Explanation
+
+S3 CRR allows you to replicate the data from one bucket in a region to another bucket in another region
+
+
+Question 3
+
+
+
+
+How can you ensure that only users who access our website through Canada are authorized in CloudFront?
+
+1
+Set up a security group and attach it to CloudFront
+2
+Use a Route 53 Latency record and attach it to CloudFront
+3
+Use CloudFront Geo Restriction
+
+
+Correct Answer
+
+
+3
+Use CloudFront Geo Restriction
+
+
+Question 4
+
+
+
+
+You would like to provide your users access to hundreds of private files in your CloudFront distribution, which is fronting an HTTP web server behind an application load balancer. What should you use?
+
+1
+CloudFront Signed URL
+2
+CloudFront Signed Cookies
+3
+CloudFront Origin Access Identity
+4
+CloudFront HTTPS encryption
+
+
+Correct Answer
+
+
+2
+CloudFront Signed Cookies
+
+Explanation
+
+Allows you to access many files
+
+
+Question 5
+
+
+
+
+You are creating an application that is going to expose an HTTP REST API. There is a need to provide request routing rules at the HTTP level. Due to security requirements, your application can only be exposed through the use of two static IPs. How can you create a solution that validates these requirements?
+
+1
+Use Global Accelerator and an Application Load Balancer
+2
+Use a Network Load Balancer and attach Elastic IPs to it
+3
+Use an Application Load Balancer and attach Elastic IPs to it
+4
+Use CloudFront with Elastic IP and an Application Load Balancer
+
+
+Correct Answer
+
+
+1
+Use Global Accelerator and an Application Load Balancer
+
+Explanation
+
+Global Accelerator will provide us with the two static IP, and the ALB will provide use with the HTTP routing rules
+
+
+Question 6
+
+
+
+
+What does this S3 bucket policy do?
+ {
+   "Version":"2012-10-17",
+   "Id":"Mystery policy",
+   "Statement":[
+     {
+       "Sid":"What could it be?",
+       "Effect":"Allow",
+       "Principal":{"CanonicalUser":"CloudFront Origin Identity Canonical User ID"},
+       "Action":"s3:GetObject",
+       "Resource":"arn:aws:s3:::examplebucket/*"
+     }
+   ]
+}
+
+1
+Forces GetObject request to be encrypted if coming from CloudFront
+2
+Only allows the S3 bucket content to be accessed from your CloudFront distribution origin identity
+3
+Only allows GetObject type of request on the S3 bucket from anybody
+
+
+Correct Answer
+
+
+2
+Only allows the S3 bucket content to be accessed from your CloudFront distribution origin identity
+
