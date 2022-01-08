@@ -1,0 +1,8 @@
+SERVERLESS service to perform analytics DIRECTLY AGAINST S3 FILES.
+
+wihtout downloading the dataset on Redshift.
+
+Uses SQL language. 
+
+Analyze data(ELB logs, VPC logs, CloudTrail Trails) directly on S3 ===> use Athena.
+
