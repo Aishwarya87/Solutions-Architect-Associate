@@ -1,0 +1,26 @@
+Content Delivery Network(CDN)
+
+data is cached locally in edge locations[over private AWS network].
+
+Improves read performance.
+
+Origins: 
+  s3 bucket: Enhanced secuirty w CF OAI[origin access identity] + s3 bucket policy: in order to access the origin
+  custom origin(HTTP): ec2 instances, load balancers;
+  
+The client first requests the edge location through public internet. The edge location then requests the origin and caches up data through private internet. 
+The next time the client requests, the EL first looks up in cache before requesting the origin.
+
+These origins[ if ec2 instances] must be public. 
+
+if Load balancers; then these should be PUBLIC but instances at the backend can now be private.
+
+CF Geo Restriction:
+  WhiteList
+  BlackList
+  Use case: Copyright Laws to control access to content.
+  
+Great for static content that must be available everywhere. 
+
+s3 Cross Region Replication: Great for dynamic content that needs to be available at low-latency in few regions.
+
