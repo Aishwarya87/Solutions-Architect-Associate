@@ -1,0 +1,42 @@
+1) Expedited retrievals allow to access data in 1-5 minutes.
+  vault lock and standard retrieval for3-5 hrs.
+  bulk retrievals for 5-12 hours.
+  
+2) when the access patterns is changing and unpredictable, use s3 intelligent tiering storage class.
+
+3) as per the best practice guidelines, db instances are placed in private subnets and allowed to communicate with web servers in the public subnet.
+
+4) aws cognito service: login module; authentication; third party login such as fb, google, etc.
+
+5) enable amazon redshift enhanced vpc routing for sending traffic through amazon vpc and not internet.
+
+6) cognito identity supports guest users for the ability to enter the app and have limited access.
+
+7) ensure an IAM role is attached to the lambda function which has the required DynamoDB privileges.
+
+8) an alias record contains a pointer to a CF, elastic beanstalk environment, load balancers, etc.
+
+9) for cost efficient and highly available, use s3 buckets.
+  Storing files in EBS is not cost-efficient.
+  glacier doesnot allow frequent access.
+  instance store is not highly available compared with s3.
+  
+10) kinesis makes real time data ingestion easy. collect, process, analyze.
+
+11) since web servers are part of the autoscaling group, the IP addresses of the instances can change. 
+  hence, the web servers security group is placed as the source for the incoming rules in the database server security group.
+  
+12) ALB supports SNI(server name indication), enabling hosting multiple domain names with different TLS certificates behing a single ALB.
+
+13) aws RAM[resource access manager]helps users to share resources with other accounts or organizations.
+
+14) increase the autoscaling cooldown timer value to ensure that the scaling activity has sufficient time to stabilize without executing another scaling action.
+
+15) VPC peering to establish connection between two vpcs; grant resource, communicate, send traffic.
+
+16) get the snapshot of the current configuration using aws config.
+
+17)
+
+
+
