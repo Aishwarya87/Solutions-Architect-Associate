@@ -1,0 +1,68 @@
+1) Since each subnet corresponds to one Availability Zone and you need 3 AZs for both the internet and intranet applications, you will need 6 subnets.
+
+2) Use Amazon S3 console to restore objects from S3 Glacier Deep Archive & then copy these objects to required S3 Intelligent-Tiering storage class.
+
+3) Which of the following mechanism can be used to deny specific IP Address from accessing API Gateway? 
+  => Resource Policies
+  => AWS WAF 
+  
+4) The production database should remain active during the migration. You need to monitor the progress of the migration. 
+  => AWS Database Migration Service
+  => AWS Migration Hub
+  AWS Migration Hub is used to track the progress of migrations in AWS.
+  AWS Database Migration Service helps you to migrate your On-Premise database to AWS keeping the On-Premise database fully operational during the migration.
+  
+5) A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without
+requiring an internet gateway, NAT device, VPN connection or AWS Direct Connect connection.
+
+6) Cognito Identity supports guest users for the ability to enter the app and have limited access.
+
+7) AWS Resource Access Manager (AWS RAM) helps users to share resources with other AWS accounts or Organizations.
+
+8) Disable verification during initial file transfers & enable it to post the last data transfer.
+
+While transferring a constantly changing database between on-premise servers & EFS using AWS DataSync,
+data verification can be disabled during data transfer & can be enabled post data transfer for data integrity checks
+& ensure that all data is properly copied between on-premise servers & EFS.
+
+9) Since the database is used infrequently, not throughout the day, and the question requires the MOST
+cost-effective storage type, the preferred choice would be EBS General Purpose SSD over EBS provisioned IOPS SSD.
+
+10) ElastiCache is an in-memory solution which can be used in front of a database to cache the common queries
+issued against the database. This can reduce the overall load on the database.
+
+11) The most efficient storage mechanism for just storing metadata in Amazon DynamoDB.
+Amazon DynamoDB is normally used in conjunction with the Simple Storage service.
+So, after storing the images in S3, you can store their metadata in DynamoDB. You can also create secondary indexes for DynamoDB Tables.
+
+12) DynamoDB and ElastiCache are perfect options for storing session data.
+
+13) Use Auto Scaling for the frontend servers.
+Use Auto Scaling for the backend instances.
+When you see a requirement for scaling, consider the Auto Scaling service provided by AWS. This can be used to scale both the frontend and backend instances.
+
+14) Amazon FSx supports Lustre file systems and users pay for only the resources they use.
+The Lustre file system is an open-source, parallel file system that can be used for HPC applications.
+
+15) A Solutions Architect is designing a highly scalable system to track records. These records must remain
+available for immediate download for up to three months and then must be deleted. What is the most appropriate decision for this use case?
+=> Store the files in Amazon S3 and create a Lifecycle Policy to remove files after 3 months.
+
+16)if scaling not happening on demand then:
+Ensure that the right metrics are being used to trigger the scale-out.
+Check your scaling policies to see whether more than one policy is triggered by an event.
+
+17) Configure Elastic Fabric Adapter (EFA) in the instance.
+
+With Elastic Fabric Adapter (EFA), users can get better performance if compared with enhanced networking (Elastic Network Adapter) or Elastic Network Interface.
+
+EFA is the most suitable method for accelerating High-Performance Computing (HPC) and machine learning application.
+
+18) Currently, a company makes use of EBS snapshots to back up their EBS Volumes. 
+As a part of the business continuity requirement, these snapshots need to be made available in another region. How could this be achieved?
+=> Create Snapshot and copy the snapshot to a new region.
+=> A snapshot is constrained to the region where it was created. After you create a snapshot of an EBS volume, you can use it to create new volumes in the same region.
+ou can also copy snapshots across regions, making it possible to use multiple regions for geographical expansion, data centre migration, and disaster recovery.
+
+
+
