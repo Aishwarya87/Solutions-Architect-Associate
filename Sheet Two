@@ -86,6 +86,10 @@
   
 36) You can use query string parameters as part of your cache key to separate your cache responses. 
 
-37) 
+37) CloudWatch execution logging allows you to capture user request and response payloads as well as error traces.
+
+38) securely configure the lambda functions: 
+  => configure your lambda fucntions to use key configuration.
+  => use encryption helpers.
 
 
