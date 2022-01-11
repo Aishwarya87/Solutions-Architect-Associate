@@ -4,4 +4,13 @@
 2) protect accidental termination of the instances?
   by using &quot; enable termination, protection &quot.
   
-3) 
+3) You encountered a soft limit of 20 instances per region. Submit the limit increase form and retry the failed requests once approved.
+
+4) Use AWS Identity and Access Management roles for EC2 instances.(securely passing credentials)
+
+5)Source/Destination check should be disabled on NAT Instance.
+
+6)Amazon Elastic Block Store (Amazon EBS) sends data points to CloudWatch for several metrics.
+All Amazon EBS volume types automatically send 1-minute metrics to CloudWatch, but only when the volume is attached to an instance.
+
+7)
