@@ -36,7 +36,56 @@
 
 16) get the snapshot of the current configuration using aws config.
 
-17)
+17) you have to design a security group to ensure that users have the ability to connect from the internet via HTTPS.
+  => allow inbound access on port 443 for 0.0.0.0/0.
+  
+18) You have been designing a template. which section of the template should you edit so that the load balancers DNS is returned upon creating a stack?
+  => Outputs. [defined in the fucntion GetAtt].
+  
+19) to reduce latency and increase throughput between instances involves the use of Placement Groups. 
+ => Cluster placement group [ instances that are kept in the common az].
+ 
+20) When an ec2 instance is in the hibernate state, you only pay for the EBS volumes and elastic IP addresses attached to it.
 
+21) you can set configuration in the user data parameter of ec2 instance.
+
+22) what is required by lambda execution role to write the logs into AWS cloudwatch?
+ => logs: CreateLogGroup
+ => logs: CreateLogStream
+ => logs: PutLogEvents
+ 
+23) which feature to capture info for outgoing and incoming IP traffic from network interfaces in a VPC.
+=> VPC flow logs.
+
+24) For max savings,  create Lifecycle policy to delete all incomplete Multipart uploads after week's time from initiation.
+
+25) There are performance issues related to the read and writes of the database ec2 instances? what to do?
+  => change the ebs volume from general purpose ssd to Provisioned IOPS SSD for large database workloads.
+  
+26) use ecs orchestration and on-demand instances for processing critical data and spot instances for the non-critical data.
+
+27) Create a Direct Connect gateway to connect the local network with multiple vpcs across different regions.
+ 
+ two gateways for highly available and redundant connections when needed.
+ 
+28) configure the security groups of the windows server instances to only accept TCP/3389[RDP] from the security group of the windows bastion host.
+
+29) application lb and network lb support dynamic mapping. 
+  
+30) athena can integrate with quicksight to visualize the data via dashboards.
+
+31) Route 53 automatically routes the tarffic to the new elb ip addresses. with alias records, users do not need to change the record sets even if they have some config changes.
+
+32) with an s3 event notification, you can select which events[copy, multipart uploads, etc.] are enabled for the notification. 
+  
+33) in a vpc peering connection, using the NAT gateway of another VPC beacomes transitive and is not supported in aws.
+
+34) any changes made to the security group are immediately affected. You do not need to restart the server. 
+
+35) You can expand existing VPC by adding secondary CIDR to your current vpc to accomodate more hosts.
+  
+36) You can use query string parameters as part of your cache key to separate your cache responses. 
+
+37) 
 
 
