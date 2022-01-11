@@ -1,0 +1,7 @@
+1) which DNS name can only be resolved within amazon ec2?
+  Only Internal DNS name can be resolved within Amazon EC2.
+  
+2) protect accidental termination of the instances?
+  by using &quot; enable termination, protection &quot.
+  
+3) 
