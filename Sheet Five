@@ -1,0 +1,16 @@
+1) scheduled scaling on e c2 instances according to predicatble load changes.
+
+2) ) A customer relationship management (CRM) application runs on Amazon EC2 instances in multiple
+Availability Zones behind an Application Load Balancer.
+If one of these instances fails, what occurs?
+
+
+
+3) A company needs to perform asynchronous processing, and has Amazon SQS as part of a decoupled
+architecture. The company wants to ensure that the number of empty responses from polling requests
+are kept to a minimum.
+What should a solutions architect do to ensure that empty responses are reduced?
+
+) Increase the receive message wait time for the queue
+
+4) 
